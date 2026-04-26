@@ -6,9 +6,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/paintings", label: "Paintings" },
-  { href: "/exhibitions", label: "Exhibitions" },
-  { href: "/cv", label: "CV" },
+  { href: "/paintings", label: "Works" },
   { href: "/about", label: "About" },
 ];
 
@@ -28,19 +26,22 @@ export default function Nav() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 1.5rem 3rem;
-          background: rgba(250, 248, 244, 0.92);
-          backdrop-filter: blur(8px);
-          border-bottom: 1px solid var(--light-gray);
+          padding: 1.4rem 2.5rem;
+          background: rgba(10, 10, 9, 0.88);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--mid);
         }
 
         .nav-logo {
           font-family: var(--font-display);
-          font-size: 1.25rem;
-          font-weight: 400;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          color: var(--charcoal);
+          font-size: 1.6rem;
+          letter-spacing: 0.08em;
+          color: var(--off-white);
+          line-height: 1;
+        }
+
+        .nav-logo span {
+          color: var(--red);
         }
 
         .nav-links {
@@ -50,12 +51,12 @@ export default function Nav() {
         }
 
         .nav-links a {
-          font-family: var(--font-body);
-          font-size: 0.7rem;
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
           font-weight: 400;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--mid-gray);
+          color: var(--muted);
           transition: color 0.2s ease;
           position: relative;
           padding-bottom: 2px;
@@ -68,13 +69,13 @@ export default function Nav() {
           left: 0;
           width: 0;
           height: 1px;
-          background: var(--accent);
+          background: var(--red);
           transition: width 0.25s ease;
         }
 
         .nav-links a:hover,
         .nav-links a.active {
-          color: var(--charcoal);
+          color: var(--off-white);
         }
 
         .nav-links a:hover::after,
@@ -88,7 +89,7 @@ export default function Nav() {
           gap: 5px;
           background: none;
           border: none;
-          cursor: pointer;
+          cursor: crosshair;
           padding: 4px;
         }
 
@@ -96,15 +97,14 @@ export default function Nav() {
           display: block;
           width: 22px;
           height: 1px;
-          background: var(--charcoal);
-          transition: all 0.3s ease;
+          background: var(--off-white);
         }
 
         .mobile-menu {
           display: none;
           position: fixed;
           inset: 0;
-          background: var(--warm-white);
+          background: var(--black);
           z-index: 99;
           flex-direction: column;
           align-items: center;
@@ -112,22 +112,17 @@ export default function Nav() {
           gap: 2.5rem;
         }
 
-        .mobile-menu.open {
-          display: flex;
-        }
+        .mobile-menu.open { display: flex; }
 
         .mobile-menu a {
           font-family: var(--font-display);
-          font-size: 2.5rem;
-          font-weight: 300;
-          letter-spacing: 0.05em;
-          color: var(--charcoal);
+          font-size: 3rem;
+          letter-spacing: 0.1em;
+          color: var(--off-white);
           transition: color 0.2s;
         }
 
-        .mobile-menu a:hover {
-          color: var(--accent);
-        }
+        .mobile-menu a:hover { color: var(--red); }
 
         .mobile-close {
           position: absolute;
@@ -135,26 +130,24 @@ export default function Nav() {
           right: 2rem;
           background: none;
           border: none;
-          font-size: 1.5rem;
-          cursor: pointer;
-          color: var(--charcoal);
+          font-size: 1.25rem;
+          cursor: crosshair;
+          color: var(--muted);
         }
 
         @media (max-width: 768px) {
-          .nav { padding: 1.25rem 1.5rem; }
+          .nav { padding: 1.2rem 1.5rem; }
           .nav-links { display: none; }
           .hamburger { display: flex; }
         }
       `}</style>
 
       <nav className="nav">
-        <Link href="/" className="nav-logo">Chris Ramirez</Link>
+        <Link href="/" className="nav-logo">THE <span>DRAIN</span></Link>
         <ul className="nav-links">
           {links.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} className={pathname === href ? "active" : ""}>
-                {label}
-              </Link>
+              <Link href={href} className={pathname === href ? "active" : ""}>{label}</Link>
             </li>
           ))}
         </ul>

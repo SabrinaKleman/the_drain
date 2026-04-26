@@ -4,8 +4,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Chris Giusto — Artist",
-  description: "Original paintings and works by Chris Giusto.",
+  title: "The Drain",
+  description: "Works by Chris Giusto.",
 };
 
 export default function RootLayout({
