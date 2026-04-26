@@ -1,12 +1,12 @@
 // Add your actual paintings to this array. 
 // Images go in /public/images/ and are referenced as "/images/filename.jpg"
+import Image from "next/image";
 const paintings = [
-  { id: 1, title: "Untitled No. 1", year: "2024", medium: "Oil on canvas", dimensions: '24" × 30"', image: "/images/work-1.jpg" },
-  { id: 2, title: "Study in Ochre", year: "2024", medium: "Acrylic on linen", dimensions: '18" × 24"', image: "/images/work-2.jpg" },
-  { id: 3, title: "Interior Light", year: "2023", medium: "Oil on canvas", dimensions: '36" × 48"', image: "/images/work-3.jpg" },
-  { id: 4, title: "Still Life with Drapery", year: "2023", medium: "Oil on panel", dimensions: '16" × 20"', image: "/images/work-4.jpg" },
-  { id: 5, title: "Composition V", year: "2023", medium: "Mixed media", dimensions: '20" × 20"', image: "/images/work-5.jpg" },
-  { id: 6, title: "Evening Study", year: "2022", medium: "Oil on canvas", dimensions: '24" × 36"', image: "/images/work-6.jpg" },
+  { id: 1, title: "Untitled No. 1", year: "2024", medium: "Oil on canvas", dimensions: '24" × 30"', image: "/images/celltv.jpg" },
+  { id: 2, title: "Study in Ochre", year: "2024", medium: "Acrylic on linen", dimensions: '18" × 24"', image: "/images/lemon.jpg" },
+  { id: 3, title: "Interior Light", year: "2023", medium: "Oil on canvas", dimensions: '36" × 48"', image: "/images/scene.jpeg" },
+  { id: 4, title: "Still Life with Drapery", year: "2023", medium: "Oil on panel", dimensions: '16" × 20"', image: "/images/square.jpeg" },
+  { id: 5, title: "Composition V", year: "2023", medium: "Mixed media", dimensions: '20" × 20"', image: "/images/square2.jpeg" },
 ];
 
 export default function Paintings() {
@@ -119,7 +119,7 @@ export default function Paintings() {
           <div key={p.id} className="painting-card fade-up" style={{ animationDelay: `${0.05 * i}s`, animationFillMode: 'both', opacity: 0 }}>
             <div className="painting-card-img">
               {/* Once you have images: <Image src={p.image} alt={p.title} fill style={{objectFit:'cover'}} /> */}
-              <div className="placeholder-tall"><span>{p.title}</span></div>
+              <Image src={p.image} alt={p.title} fill style={{ objectFit: 'cover' }} />
             </div>
             <p className="painting-card-title">{p.title}</p>
             <p className="painting-card-meta">{p.medium} &nbsp;·&nbsp; {p.dimensions} &nbsp;·&nbsp; {p.year}</p>

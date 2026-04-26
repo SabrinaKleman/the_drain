@@ -1,47 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 
 // Replace these with real image paths once you add artwork to /public/images/
 const featuredWorks = [
-  {
-    id: 1,
-    title: "Untitled No. 1",
-    year: "2024",
-    medium: "Oil on canvas",
-    image: "/images/work-1.jpg",
-    size: "large",
-  },
-  {
-    id: 2,
-    title: "Study in Ochre",
-    year: "2024",
-    medium: "Acrylic on linen",
-    image: "/images/work-2.jpg",
-    size: "small",
-  },
-  {
-    id: 3,
-    title: "Interior Light",
-    year: "2023",
-    medium: "Oil on canvas",
-    image: "/images/work-3.jpg",
-    size: "small",
-  },
-  {
-    id: 4,
-    title: "Still Life with Drapery",
-    year: "2023",
-    medium: "Oil on panel",
-    image: "/images/work-4.jpg",
-    size: "medium",
-  },
-  {
-    id: 5,
-    title: "Composition V",
-    year: "2023",
-    medium: "Mixed media",
-    image: "/images/work-5.jpg",
-    size: "medium",
-  },
+  { id: 1, title: "Untitled No. 1", year: "2024", medium: "Oil on canvas", image: "/images/celltv.jpg", size: "large" },
+  { id: 2, title: "Study in Ochre", year: "2024", medium: "Acrylic on linen", image: "/images/lemon.jpg", size: "small" },
+  { id: 3, title: "Interior Light", year: "2023", medium: "Oil on canvas", image: "/images/scene.jpeg", size: "small" },
+  { id: 4, title: "Still Life with Drapery", year: "2023", medium: "Oil on panel", image: "/images/square.jpeg", size: "medium" },
+  { id: 5, title: "Composition V", year: "2023", medium: "Mixed media", image: "/images/square2.jpeg", size: "medium" },
 ];
 
 export default function Home() {
@@ -267,9 +233,7 @@ export default function Home() {
         {featuredWorks.map((work) => (
           <div key={work.id} className="grid-item">
             {/* Replace with <Image> from next/image once you have real photos */}
-            <div className="placeholder-img">
-              <span>{work.title}</span>
-            </div>
+            <Image src={work.image} alt={work.title} fill style={{ objectFit: 'cover' }} />
             <div className="grid-item-overlay">
               <p className="grid-item-title">{work.title}</p>
               <p className="grid-item-meta">{work.medium} — {work.year}</p>
