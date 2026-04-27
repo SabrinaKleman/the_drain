@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function About() {
   return (
     <>
@@ -119,7 +120,13 @@ export default function About() {
 
       <div className="about-wrap">
         <div className="about-image-col fade-up fade-up-delay-1">
-          {/* Replace with <Image> once you have a photo */}
+          <Image
+  src="/images/chris.jpeg"
+  alt="Chris Giusto"
+  width={800}
+  height={1000}
+  style={{ width: '100%', height: 'auto' }}
+/>
           <div className="about-portrait">
             <div className="portrait-placeholder">
               <span className="portrait-caption">Chris Giusto — Miami</span>

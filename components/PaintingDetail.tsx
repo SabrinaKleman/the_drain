@@ -51,9 +51,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
         .detail-img-wrap {
           position: relative;
           width: 100%;
-          aspect-ratio: 4/5;
           background: var(--dark-surface);
-          overflow: hidden;
         }
 
         .detail-img-wrap img {
@@ -180,7 +178,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
         <div className="detail-grid">
           <div className="detail-image-col fade-up fade-up-delay-1">
             <div className="detail-img-wrap">
-              <Image src={image} alt={title} fill style={{ objectFit: 'cover' }} />
+             <Image src={image} alt={title} width={1200} height={1600} style={{ width: '100%', height: 'auto' }}/>
             </div>
           </div>
 

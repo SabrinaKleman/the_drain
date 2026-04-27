@@ -5,8 +5,8 @@ const featuredWorks = [
   { id: 1, title: "You Are Here", year: "2024", medium: "Acrylic on canvas", image: "/images/celltv.jpg", size: "large" },
   { id: 2, title: "Untitled II", year: "2024", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
   { id: 3, title: "Untitled III", year: "2024", medium: "Acrylic", image: "/images/scene.jpeg", size: "small" },
-  { id: 4, title: "Untitled IV", year: "2023", medium: "Oil on panel", image: "/images/square.jpeg", size: "medium" },
-  { id: 5, title: "Untitled V", year: "2023", medium: "Mixed media", image: "/images/square2.jpeg", size: "medium" },
+  { id: 4, title: "Untitled IV", year: "2023", medium: "Oil on panel", image: "/images/square5.jpeg", size: "medium" },
+  { id: 5, title: "Untitled V", year: "2023", medium: "Mixed media", image: "/images/roses2.jpeg", size: "medium" },
 ];
 
 export default function Home() {
