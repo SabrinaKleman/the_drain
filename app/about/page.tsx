@@ -127,11 +127,6 @@ export default function About() {
   height={1000}
   style={{ width: '100%', height: 'auto' }}
 />
-          <div className="about-portrait">
-            <div className="portrait-placeholder">
-              <span className="portrait-caption">Chris Giusto — Miami</span>
-            </div>
-          </div>
         </div>
 
         <div className="about-text-col">
