@@ -75,15 +75,15 @@ export default function Paintings() {
         /* Masonry via CSS columns */
         .masonry {
           columns: 3;
-          column-gap: 6px;
-          padding: 0 2.5rem;
+          column-gap: 20px;
+          padding: 0 3.5rem;
           max-width: 1400px;
           margin: 0 auto;
         }
 
         .masonry-item {
           break-inside: avoid;
-          margin-bottom: 6px;
+          margin-bottom: 20px;
           cursor: crosshair;
           position: relative;
           display: block;
