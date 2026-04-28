@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type PaintingDetailProps = {
   title: string;
@@ -11,6 +14,7 @@ type PaintingDetailProps = {
 };
 
 export default function PaintingDetail({ title, year, medium, dimensions, image, statement }: PaintingDetailProps) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
   const body = encodeURIComponent(`Hi Chris,\n\nI'm interested in learning more about "${title}" (${medium}, ${dimensions}, ${year}).\n\nPlease let me know if it's available.\n\nThank you`);
 
@@ -52,20 +56,41 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           position: relative;
           width: 100%;
           background: var(--dark-surface);
+          cursor: zoom-in;
         }
 
         .detail-img-wrap img {
-          object-fit: cover;
-          transition: transform 0.8s ease;
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.8s ease, filter 0.4s ease;
+          filter: brightness(0.9);
         }
 
         .detail-img-wrap:hover img {
-          transform: scale(1.03);
+          transform: scale(1.02);
+          filter: brightness(0.75);
         }
 
-        .detail-text-col {
-          padding-top: 0.5rem;
+        .detail-img-hint {
+          position: absolute;
+          bottom: 0.75rem;
+          right: 0.75rem;
+          font-family: var(--font-mono);
+          font-size: 0.5rem;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          background: var(--black);
+          color: var(--muted);
+          padding: 0.2rem 0.5rem;
+          opacity: 0;
+          transition: opacity 0.3s;
+          pointer-events: none;
         }
+
+        .detail-img-wrap:hover .detail-img-hint { opacity: 1; }
+
+        .detail-text-col { padding-top: 0.5rem; }
 
         .detail-title {
           font-family: var(--font-display);
@@ -164,11 +189,84 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
 
         .detail-nav-link:hover { color: var(--off-white); }
 
+        /* Lightbox */
+        .lightbox-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.97);
+          z-index: 500;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          cursor: zoom-out;
+          animation: lbFadeIn 0.2s ease;
+        }
+
+        @keyframes lbFadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+
+        .lightbox-inner {
+          max-width: min(85vw, 900px);
+          max-height: 82vh;
+          width: 100%;
+          cursor: default;
+        }
+
+        .lightbox-inner img {
+          width: 100% !important;
+          height: auto !important;
+          position: relative !important;
+          max-height: 82vh;
+          object-fit: contain;
+          display: block;
+        }
+
+        .lightbox-info {
+          margin-top: 1.5rem;
+          text-align: center;
+        }
+
+        .lightbox-title {
+          font-family: var(--font-serif);
+          font-size: 1.2rem;
+          font-style: italic;
+          color: var(--off-white);
+          margin-bottom: 0.3rem;
+        }
+
+        .lightbox-meta {
+          font-family: var(--font-mono);
+          font-size: 0.58rem;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+
+        .lightbox-close {
+          position: fixed;
+          top: 1.5rem;
+          right: 2rem;
+          background: none;
+          border: none;
+          color: var(--muted);
+          font-size: 0.7rem;
+          cursor: pointer;
+          font-family: var(--font-mono);
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          transition: color 0.2s;
+        }
+
+        .lightbox-close:hover { color: var(--off-white); }
+
         @media (max-width: 900px) {
           .detail-wrap { padding: 8rem 1.5rem 4rem; }
           .detail-grid { grid-template-columns: 1fr; gap: 3rem; }
           .detail-image-col { position: static; }
-          .detail-img-wrap { aspect-ratio: 3/2; }
         }
       `}</style>
 
@@ -177,8 +275,15 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
 
         <div className="detail-grid">
           <div className="detail-image-col fade-up fade-up-delay-1">
-            <div className="detail-img-wrap">
-             <Image src={image} alt={title} width={1200} height={1600} style={{ width: '100%', height: 'auto' }}/>
+            <div className="detail-img-wrap" onClick={() => setLightboxOpen(true)}>
+              <Image
+                src={image}
+                alt={title}
+                width={1200}
+                height={1600}
+                style={{ width: '100%', height: 'auto' }}
+              />
+              <span className="detail-img-hint">Expand ↗</span>
             </div>
           </div>
 
@@ -221,6 +326,25 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           </div>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div className="lightbox-overlay" onClick={() => setLightboxOpen(false)}>
+          <button className="lightbox-close" onClick={() => setLightboxOpen(false)}>✕ close</button>
+          <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
+            <Image
+              src={image}
+              alt={title}
+              width={1200}
+              height={1600}
+              style={{ width: '100%', height: 'auto', maxHeight: '82vh', objectFit: 'contain' }}
+            />
+          </div>
+          <div className="lightbox-info">
+            <p className="lightbox-title">{title}</p>
+            <p className="lightbox-meta">{medium} &nbsp;·&nbsp; {dimensions} &nbsp;·&nbsp; {year}</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

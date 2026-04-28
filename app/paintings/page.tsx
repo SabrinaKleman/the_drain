@@ -74,16 +74,16 @@ export default function Paintings() {
 
         /* Masonry via CSS columns */
         .masonry {
-          columns: 3;
-          column-gap: 20px;
-          padding: 0 3.5rem;
+          columns: 2;
+          column-gap: 40px;
+          padding: 0 2.5rem;
           max-width: 1400px;
           margin: 0 auto;
         }
 
         .masonry-item {
           break-inside: avoid;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
           cursor: crosshair;
           position: relative;
           display: block;
