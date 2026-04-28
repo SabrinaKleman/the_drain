@@ -13,33 +13,31 @@ type Painting = {
   image: string;
   type: "page" | "lightbox";
   slug?: string;
-  width: number;   // natural image width (for aspect ratio)
-  height: number;  // natural image height (for aspect ratio)
+  width: number;
+  height: number;
 };
 
 const paintings: Painting[] = [
   // — Full pages —
-  // Update width/height to match the real pixel dimensions of each image if you know them.
-  // These are plausible guesses — Next.js will still render correctly, they just affect layout spacing.
-  { id: 1,  title: "Planes and Trees",      year: "2024", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.png",   type: "page",     slug: "planesandtrees",    width: 800,  height: 1000 },
-  { id: 2,  title: "TV in the Land",        year: "2024", medium: "Acrylic on canvas", dimensions: '20" × 24"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",          width: 800,  height: 960  },
-  { id: 3,  title: "Still Life with Lemon", year: "2023", medium: "Oil on panel",      dimensions: '12" × 12"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",             width: 800,  height: 800  },
-  { id: 4,  title: "Cell TV",               year: "2024", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",            width: 800,  height: 1000 },
-  { id: 5,  title: "Airplane",              year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/airplane.png",         type: "page",     slug: "airplane",          width: 800,  height: 1067 },
-  { id: 6,  title: "Computer",              year: "2024", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/computer.jpeg",        type: "page",     slug: "computer",          width: 800,  height: 800  },
-  { id: 7,  title: "Breakfast in Miami",    year: "2023", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.png", type: "page",     slug: "breakfastinmiami",  width: 800,  height: 1000 },
+  { id: 1,  title: "Planes and Trees",      year: "2024", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.png",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000 },
+  { id: 2,  title: "TV in the Land",        year: "2024", medium: "Acrylic on canvas", dimensions: '20" × 24"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",         width: 800, height: 960  },
+  { id: 3,  title: "Still Life with Lemon", year: "2023", medium: "Oil on panel",      dimensions: '12" × 12"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",            width: 800, height: 800  },
+  { id: 4,  title: "Cell TV",               year: "2024", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
+  { id: 5,  title: "Airplane",              year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/airplane.png",         type: "page",     slug: "airplane",         width: 800, height: 1067 },
+  { id: 6,  title: "Computer",              year: "2024", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/computer.jpeg",        type: "page",     slug: "computer",         width: 800, height: 800  },
+  { id: 7,  title: "Breakfast in Miami",    year: "2023", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.png", type: "page",     slug: "breakfastinmiami", width: 800, height: 1000 },
   // — Lightbox —
-  { id: 8,  title: "You Are Here",          year: "2024", medium: "Acrylic on canvas", dimensions: '12" × 12"', image: "/images/drain.png",            type: "lightbox",                            width: 800,  height: 800  },
-  { id: 9,  title: "Roses I",               year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses.png",            type: "lightbox",                            width: 800,  height: 1000 },
-  { id: 10, title: "Roses II",              year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses2.jpeg",          type: "lightbox",                            width: 800,  height: 1000 },
-  { id: 11, title: "Scene",                 year: "2023", medium: "Mixed media",       dimensions: '20" × 20"', image: "/images/scene.jpeg",           type: "lightbox",                            width: 800,  height: 800  },
-  { id: 12, title: "Square I",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square.jpeg",          type: "lightbox",                            width: 800,  height: 800  },
-  { id: 13, title: "Square II",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square2.jpeg",         type: "lightbox",                            width: 800,  height: 800  },
-  { id: 14, title: "Square III",            year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square3.jpg",          type: "lightbox",                            width: 800,  height: 800  },
-  { id: 15, title: "Square IV",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square4.jpeg",         type: "lightbox",                            width: 800,  height: 800  },
-  { id: 16, title: "Square V",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square5.jpeg",         type: "lightbox",                            width: 800,  height: 800  },
-  { id: 17, title: "Ghost in the Woods",    year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/ghostinwoods.png",     type: "lightbox",                            width: 800,  height: 1067 },
-  { id: 18, title: "Dark Trees",            year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/darktrees.jpeg",       type: "lightbox",                            width: 800,  height: 1000 },
+  { id: 8,  title: "You Are Here",          year: "2024", medium: "Acrylic on canvas", dimensions: '12" × 12"', image: "/images/drain.png",            type: "lightbox",                           width: 800, height: 800  },
+  { id: 9,  title: "Roses I",               year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses.png",            type: "lightbox",                           width: 800, height: 1000 },
+  { id: 10, title: "Roses II",              year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses2.jpeg",          type: "lightbox",                           width: 800, height: 1000 },
+  { id: 11, title: "Scene",                 year: "2023", medium: "Mixed media",       dimensions: '20" × 20"', image: "/images/scene.jpeg",           type: "lightbox",                           width: 800, height: 800  },
+  { id: 12, title: "Square I",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square.jpeg",          type: "lightbox",                           width: 800, height: 800  },
+  { id: 13, title: "Square II",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square2.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 14, title: "Square III",            year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square3.jpg",          type: "lightbox",                           width: 800, height: 800  },
+  { id: 15, title: "Square IV",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square4.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 16, title: "Square V",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square5.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 17, title: "Ghost in the Woods",    year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/ghostinwoods.png",     type: "lightbox",                           width: 800, height: 1067 },
+  { id: 18, title: "Dark Trees",            year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/darktrees.jpeg",       type: "lightbox",                           width: 800, height: 1000 },
 ];
 
 export default function Paintings() {
@@ -49,9 +47,9 @@ export default function Paintings() {
     <>
       <style>{`
         .page-hero {
-          padding: 9rem 2.5rem 3.5rem;
+          padding: 9rem 3rem 4rem;
           border-bottom: 1px solid var(--mid);
-          margin-bottom: 4rem;
+          margin-bottom: 5rem;
           display: flex;
           align-items: baseline;
           justify-content: space-between;
@@ -67,103 +65,78 @@ export default function Paintings() {
 
         .page-count {
           font-family: var(--font-mono);
-          font-size: 0.65rem;
+          font-size: 0.6rem;
           letter-spacing: 0.2em;
           color: var(--muted);
         }
 
-        /* Masonry via CSS columns */
-        .masonry {
-          columns: 2;
-          column-gap: 40px;
-          padding: 0 2.5rem;
-          max-width: 1400px;
+        /* Two-column editorial grid */
+        .works-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 6rem 4rem;
+          padding: 0 3rem;
+          max-width: 1300px;
           margin: 0 auto;
         }
 
-        .masonry-item {
-          break-inside: avoid;
-          margin-bottom: 40px;
+        /* Every third item spans full width for rhythm */
+        .works-grid .work-item:nth-child(5n + 3) {
+          grid-column: 1 / -1;
+          max-width: 60%;
+          margin: 0 auto;
+        }
+
+        .work-item {
           cursor: crosshair;
-          position: relative;
           display: block;
           color: inherit;
           text-decoration: none;
         }
 
-        /* The image fills its natural aspect ratio — no cropping */
-        .masonry-img {
-          position: relative;
+        /* Image — no cropping, full natural height */
+        .work-img {
           width: 100%;
-          overflow: hidden;
           background: var(--dark-surface);
+          overflow: hidden;
+          margin-bottom: 1.25rem;
         }
 
-        .masonry-img img {
+        .work-img img {
           width: 100%;
-          height: auto !important;
-          position: relative !important;
+          height: auto;
           display: block;
-          transition: transform 0.6s ease, filter 0.4s ease;
-          filter: brightness(0.88) saturate(0.9);
+          transition: opacity 0.4s ease;
         }
 
-        .masonry-item:hover .masonry-img img {
-          transform: scale(1.03);
-          filter: brightness(0.65) saturate(1.1);
+        .work-item:hover .work-img img {
+          opacity: 0.75;
         }
 
-        /* Hover overlay */
-        .masonry-overlay {
-          position: absolute;
-          inset: 0;
+        /* Caption below — quiet and small */
+        .work-caption {
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
-          padding: 1rem;
-          background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          pointer-events: none;
+          gap: 0.2rem;
+          padding-left: 0.1rem;
         }
 
-        .masonry-item:hover .masonry-overlay { opacity: 1; }
-
-        .masonry-title {
+        .work-caption-title {
           font-family: var(--font-serif);
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           font-style: italic;
           color: var(--off-white);
-          margin-bottom: 0.2rem;
-          line-height: 1.2;
+          line-height: 1.3;
         }
 
-        .masonry-meta {
+        .work-caption-meta {
           font-family: var(--font-mono);
-          font-size: 0.52rem;
+          font-size: 0.55rem;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--light);
-        }
-
-        .masonry-badge {
-          position: absolute;
-          top: 0.6rem;
-          right: 0.6rem;
-          font-family: var(--font-mono);
-          font-size: 0.48rem;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          background: var(--black);
           color: var(--muted);
-          padding: 0.18rem 0.45rem;
-          opacity: 0;
-          transition: opacity 0.3s;
-          z-index: 2;
-          pointer-events: none;
+          line-height: 1.8;
         }
-
-        .masonry-item:hover .masonry-badge { opacity: 1; }
 
         /* Lightbox */
         .lightbox-overlay {
@@ -176,7 +149,7 @@ export default function Paintings() {
           align-items: center;
           justify-content: center;
           padding: 2rem;
-          cursor: crosshair;
+          cursor: zoom-out;
           animation: lbFadeIn 0.2s ease;
         }
 
@@ -186,18 +159,19 @@ export default function Paintings() {
         }
 
         .lightbox-inner {
-          position: relative;
-          max-width: min(80vw, 700px);
-          max-height: 75vh;
+          max-width: min(85vw, 900px);
+          max-height: 80vh;
           width: 100%;
+          cursor: default;
         }
 
         .lightbox-inner img {
           width: 100% !important;
           height: auto !important;
           position: relative !important;
-          max-height: 75vh;
+          max-height: 80vh;
           object-fit: contain;
+          display: block;
         }
 
         .lightbox-info {
@@ -207,15 +181,15 @@ export default function Paintings() {
 
         .lightbox-title {
           font-family: var(--font-serif);
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           font-style: italic;
           color: var(--off-white);
-          margin-bottom: 0.4rem;
+          margin-bottom: 0.3rem;
         }
 
         .lightbox-meta {
           font-family: var(--font-mono);
-          font-size: 0.6rem;
+          font-size: 0.55rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: var(--muted);
@@ -229,7 +203,7 @@ export default function Paintings() {
           border: none;
           color: var(--muted);
           font-size: 0.7rem;
-          cursor: crosshair;
+          cursor: pointer;
           font-family: var(--font-mono);
           letter-spacing: 0.15em;
           text-transform: uppercase;
@@ -239,13 +213,14 @@ export default function Paintings() {
         .lightbox-close:hover { color: var(--off-white); }
 
         @media (max-width: 900px) {
-          .masonry { columns: 2; }
-          .page-hero { padding: 8rem 1.5rem 2.5rem; }
-          .masonry { padding: 0 1.5rem; }
+          .page-hero { padding: 8rem 1.5rem 3rem; }
+          .works-grid { padding: 0 1.5rem; gap: 4rem 2rem; }
+          .works-grid .work-item:nth-child(5n + 3) { max-width: 80%; }
         }
 
-        @media (max-width: 500px) {
-          .masonry { columns: 1; }
+        @media (max-width: 600px) {
+          .works-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+          .works-grid .work-item:nth-child(5n + 3) { grid-column: 1; max-width: 100%; }
         }
       `}</style>
 
@@ -254,12 +229,11 @@ export default function Paintings() {
         <span className="page-count fade-up fade-up-delay-2">{paintings.length} pieces</span>
       </div>
 
-      <div className="masonry">
+      <div className="works-grid">
         {paintings.map((p, i) => {
           const inner = (
             <>
-              <div className="masonry-img">
-                {/* width/height props give Next.js the aspect ratio — actual display size is controlled by CSS */}
+              <div className="work-img">
                 <Image
                   src={p.image}
                   alt={p.title}
@@ -267,12 +241,14 @@ export default function Paintings() {
                   height={p.height}
                   style={{ width: '100%', height: 'auto' }}
                 />
-                <div className="masonry-overlay">
-                  <p className="masonry-title">{p.title}</p>
-                  <p className="masonry-meta">{p.medium} · {p.year}</p>
-                </div>
               </div>
-              <span className="masonry-badge">{p.type === "page" ? "View work →" : "Expand ↗"}</span>
+              <div className="work-caption">
+                <p className="work-caption-title">{p.title}</p>
+                <p className="work-caption-meta">
+                  {p.medium}<br />
+                  {p.dimensions} &nbsp;·&nbsp; {p.year}
+                </p>
+              </div>
             </>
           );
 
@@ -280,16 +256,16 @@ export default function Paintings() {
             <Link
               key={p.id}
               href={`/paintings/${p.slug}`}
-              className="masonry-item fade-up"
-              style={{ animationDelay: `${0.03 * i}s`, animationFillMode: 'both', opacity: 0 }}
+              className="work-item fade-up"
+              style={{ animationDelay: `${0.04 * i}s`, animationFillMode: 'both', opacity: 0 }}
             >
               {inner}
             </Link>
           ) : (
             <div
               key={p.id}
-              className="masonry-item fade-up"
-              style={{ animationDelay: `${0.03 * i}s`, animationFillMode: 'both', opacity: 0 }}
+              className="work-item fade-up"
+              style={{ animationDelay: `${0.04 * i}s`, animationFillMode: 'both', opacity: 0 }}
               onClick={() => setLightbox(p)}
             >
               {inner}
@@ -307,7 +283,7 @@ export default function Paintings() {
               alt={lightbox.title}
               width={lightbox.width}
               height={lightbox.height}
-              style={{ width: '100%', height: 'auto', maxHeight: '75vh', objectFit: 'contain' }}
+              style={{ width: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain' }}
             />
           </div>
           <div className="lightbox-info">

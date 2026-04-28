@@ -121,7 +121,7 @@ export default function About() {
       <div className="about-wrap">
         <div className="about-image-col fade-up fade-up-delay-1">
           <Image
-  src="/images/chris.jpeg"
+  src="/images/drain.png"
   alt="Chris Giusto"
   width={800}
   height={1000}
@@ -137,13 +137,13 @@ export default function About() {
 
           <div className="about-bio fade-up fade-up-delay-3">
             <p>
-              Chris Giusto is a Miami-based artist working under the name The Drain.
+              Chris Giusto is a New York-based artist working under the name The Drain.
               His paintings combine dark humor with deadpan observation — everyday objects
               rendered with a directness that feels both familiar and deeply strange.
             </p>
             <p>
               {/* Add Chris's real bio here */}
-              He lives and works in Miami, Florida.
+              He lives and works in Brooklyn, New York.
             </p>
           </div>
 
