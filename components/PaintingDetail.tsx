@@ -365,7 +365,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
 
             <div className="fade-up fade-up-delay-3">
               <p className="detail-statement-label">Statement</p>
-              <p className="detail-statement">{statement}</p>
+              <div className="detail-statement">{statement}</div>
             </div>
 
             <div className="fade-up fade-up-delay-4">
