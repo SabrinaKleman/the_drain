@@ -17,7 +17,7 @@ export default function CellTV() {
       progress. This painting is about that shrinkage — not with judgment,
       just with attention.
     </p>
-
+<br />
     <p>
       Cellular motors are specialized proteins—kinesin, dynein, and myosin—
       that convert chemical energy (ATP) into mechanical work to drive

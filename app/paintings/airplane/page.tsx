@@ -7,8 +7,22 @@ export default function Airplane() {
       year="2023"
       medium="Oil on canvas"
       dimensions='18" × 24"'
-      image="/images/airplane.png"
-      statement="Every few minutes, one passes overhead. You stop noticing after a while — hundreds of people in a metal tube punching through the sky at 500 miles per hour becomes background noise. This painting tries to give that moment back its strangeness. Just the plane. Just the fact of it."
-    />
+      image="/images/airplane.jpeg"
+      statement={
+  <>
+    <p>
+      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
+    </p>
+<br />
+    <p>
+      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
+    </p>
+  </>
+}
+    extraImages={[
+    "/images/planesandtrees2.jpeg",
+  ]}/>
   );
 }
+
+
