@@ -24,7 +24,7 @@ const paintings: Painting[] = [
   { id: 4,  title: "Cell TV",               year: "2026", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
   { id: 5,  title: "Airplane",              year: "2026", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/airplane.jpg",         type: "page",     slug: "airplane",         width: 800, height: 1067 },
   { id: 6,  title: "Computer",              year: "2025", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/computer.jpeg",        type: "page",     slug: "computer",         width: 800, height: 800  },
-  { id: 7,  title: "Breakfast in Miami",    year: "2026", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.png", type: "page",     slug: "breakfastinmiami", width: 800, height: 1000 },
+  { id: 7,  title: "Breakfast in Miami",    year: "2026", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.jpeg", type: "page",     slug: "breakfastinmiami", width: 800, height: 1000 },
   // — Lightbox —
   { id: 8,  title: "Abstract Trees",        year: "2025", medium: "Acrylic on canvas", dimensions: '12" × 12"', image: "/images/trees.jpeg",            type: "lightbox",                           width: 800, height: 800  },
   { id: 9,  title: "Roses I",               year: "2026", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses.png",            type: "lightbox",                           width: 800, height: 1000 },

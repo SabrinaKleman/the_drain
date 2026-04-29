@@ -147,7 +147,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
 
         .detail-statement {
           font-family: var(--font-serif);
-          font-size: 1.05rem;
+          font-size: 1rem;
           font-style: italic;
           line-height: 1.85;
           color: #3a3a36;
