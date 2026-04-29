@@ -10,10 +10,12 @@ type PaintingDetailProps = {
   dimensions: string;
   image: string;
   statement: string;
+  extraImages?: string[];
 };
 
-export default function PaintingDetail({ title, year, medium, dimensions, image, statement }: PaintingDetailProps) {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
+export default function PaintingDetail({ title, year, medium, dimensions, image, statement, extraImages = [] }: PaintingDetailProps) {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+const allImages = [image, ...extraImages];
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
   const body = encodeURIComponent(`Hi Chris,\n\nI'm interested in learning more about "${title}" (${medium}, ${dimensions}, ${year}).\n\nPlease let me know if it's available.\n\nThank you`);
 
@@ -150,6 +152,29 @@ body { background-color: #f5f0e8; color: #1a1a18; }
           color: #3a3a36;
           margin-bottom: 3.5rem;
         }
+        .extra-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.extra-img-wrap {
+  width: 100%;
+  background: #e8e0d4;
+  cursor: zoom-in;
+}
+
+.extra-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.extra-img-wrap:hover img {
+  opacity: 0.75;
+}
 
         .inquire-btn {
           display: inline-block;
@@ -262,7 +287,24 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         }
 
         .lightbox-close:hover { color: #1a1a18; }
+.lb-prev, .lb-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  padding: 1rem;
+  transition: color 0.2s;
+  z-index: 501;
+}
 
+.lb-prev { left: 1.5rem; }
+.lb-next { right: 1.5rem; }
+.lb-prev:hover, .lb-next:hover { color: var(--off-white); }
 
         @media (max-width: 900px) {
           .detail-wrap { padding: 8rem 1.5rem 4rem; }
@@ -276,7 +318,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
 
         <div className="detail-grid">
           <div className="detail-image-col fade-up fade-up-delay-1">
-            <div className="detail-img-wrap" onClick={() => setLightboxOpen(true)}>
+            <div className="detail-img-wrap" onClick={() => setLightboxIndex(0)}>
               <Image
                 src={image}
                 alt={title}
@@ -286,6 +328,21 @@ body { background-color: #f5f0e8; color: #1a1a18; }
               />
               <span className="detail-img-hint">Expand ↗</span>
             </div>
+            {extraImages.length > 0 && (
+  <div className="extra-images">
+    {extraImages.map((img, i) => (
+      <div key={i} className="extra-img-wrap" onClick={() => setLightboxIndex(i + 1)}>
+        <Image
+          src={img}
+          alt={`${title} ${i + 2}`}
+          width={1200}
+          height={1600}
+          style={{ width: '100%', height: 'auto' }}
+        />
+      </div>
+    ))}
+  </div>
+)}
           </div>
 
           <div className="detail-text-col">
@@ -328,24 +385,34 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         </div>
       </div>
 
-      {lightboxOpen && (
-        <div className="lightbox-overlay" onClick={() => setLightboxOpen(false)}>
-          <button className="lightbox-close" onClick={() => setLightboxOpen(false)}>✕ close</button>
-          <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
-            <Image
-              src={image}
-              alt={title}
-              width={1200}
-              height={1600}
-              style={{ width: '100%', height: 'auto', maxHeight: '82vh', objectFit: 'contain' }}
-            />
-          </div>
-          <div className="lightbox-info">
-            <p className="lightbox-title">{title}</p>
-            <p className="lightbox-meta">{medium} &nbsp;·&nbsp; {dimensions} &nbsp;·&nbsp; {year}</p>
-          </div>
-        </div>
-      )}
+      {lightboxIndex !== null && (
+  <div className="lightbox-overlay" onClick={() => setLightboxIndex(null)}>
+    <button className="lightbox-close" onClick={() => setLightboxIndex(null)}>✕ close</button>
+
+    {/* Prev / Next */}
+    {allImages.length > 1 && (
+      <>
+        <button className="lb-prev" onClick={e => { e.stopPropagation(); setLightboxIndex((lightboxIndex - 1 + allImages.length) % allImages.length); }}>←</button>
+        <button className="lb-next" onClick={e => { e.stopPropagation(); setLightboxIndex((lightboxIndex + 1) % allImages.length); }}>→</button>
+      </>
+    )}
+
+    <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
+      <Image
+        src={allImages[lightboxIndex]}
+        alt={title}
+        width={1200}
+        height={1600}
+        style={{ width: '100%', height: 'auto', maxHeight: '82vh', objectFit: 'contain' }}
+      />
+    </div>
+    <div className="lightbox-info">
+      <p className="lightbox-title">{title}</p>
+      <p className="lightbox-meta">{medium} &nbsp;·&nbsp; {dimensions} &nbsp;·&nbsp; {year}</p>
+      {allImages.length > 1 && <p className="lightbox-meta" style={{marginTop: '0.4rem'}}>{lightboxIndex + 1} / {allImages.length}</p>}
+    </div>
+  </div>
+)}
     </>
   );
 }
