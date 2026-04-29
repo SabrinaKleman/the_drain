@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 type Painting = {
   id: number;
