@@ -70,22 +70,15 @@ export default function Paintings() {
           color: var(--muted);
         }
 
-        /* Two-column editorial grid */
-        .works-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 6rem 4rem;
-          padding: 0 3rem;
-          max-width: 1300px;
-          margin: 0 auto;
-        }
-
-        /* Every third item spans full width for rhythm */
-        .works-grid .work-item:nth-child(5n + 3) {
-          grid-column: 1 / -1;
-          max-width: 60%;
-          margin: 0 auto;
-        }
+        /* One-column editorial grid */
+       .works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  padding: 0 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
         .work-item {
           cursor: crosshair;

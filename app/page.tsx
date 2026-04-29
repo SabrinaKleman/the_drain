@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featuredWorks = [
-  { id: 1, title: "You Are Here", year: "2024", medium: "Acrylic on canvas", image: "/images/celltv.jpg", size: "large" },
-  { id: 2, title: "Untitled II", year: "2024", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
-  { id: 3, title: "Untitled III", year: "2024", medium: "Acrylic", image: "/images/scene.jpeg", size: "small" },
-  { id: 4, title: "Untitled IV", year: "2023", medium: "Oil on panel", image: "/images/square5.jpeg", size: "medium" },
-  { id: 5, title: "Untitled V", year: "2023", medium: "Mixed media", image: "/images/roses2.jpeg", size: "medium" },
+  { id: 1, title: "Cellular Motor", year: "2026", medium: "Acrylic on canvas", image: "/images/celltv.jpg", size: "large" },
+  { id: 2, title: "Life and Lemons", year: "2026", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
+  { id: 3, title: "Dark Scene", year: "2024", medium: "Acrylic", image: "/images/scene.jpeg", size: "small" },
+  { id: 4, title: "Square V", year: "2023", medium: "Oil on panel", image: "/images/square5.jpeg", size: "medium" },
+  { id: 5, title: "Roses", year: "2023", medium: "Mixed media", image: "/images/roses.png", size: "medium" },
 ];
 
 export default function Home() {
