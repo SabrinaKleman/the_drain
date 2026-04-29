@@ -7,7 +7,7 @@ export default function Airplane() {
       year="2023"
       medium="Oil on canvas"
       dimensions='18" × 24"'
-      image="/images/airplane.jpeg"
+      image="/images/airplane.jpg"
       statement={
   <>
     <p>
@@ -20,7 +20,7 @@ export default function Airplane() {
   </>
 }
     extraImages={[
-    "/images/planesandtrees2.jpeg",
+    "/images/airplane2.jpeg",
   ]}/>
   );
 }
