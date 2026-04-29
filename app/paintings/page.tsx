@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -42,7 +42,21 @@ const paintings: Painting[] = [
 
 export default function Paintings() {
   const [lightbox, setLightbox] = useState<Painting | null>(null);
+const triggerRef = useRef<HTMLDivElement>(null);
 
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      document.body.classList.toggle("light-mode", !entry.isIntersecting);
+    },
+    { threshold: 0 }
+  );
+  if (triggerRef.current) observer.observe(triggerRef.current);
+  return () => {
+    observer.disconnect();
+    document.body.classList.remove("light-mode");
+  };
+}, []);
   return (
     <>
       <style>{`
@@ -76,8 +90,9 @@ export default function Paintings() {
   grid-template-columns: 1fr;
   gap: 6rem;
   padding: 0 3rem;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
+  position: relative; /* add this */
 }
 
         .work-item {
@@ -105,7 +120,44 @@ export default function Paintings() {
         .work-item:hover .work-img img {
           opacity: 0.75;
         }
+/* Light mode transition */
+body {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
 
+body.light-mode {
+  background-color: #f5f0e8;
+  color: #1a1a18;
+}
+
+body.light-mode .page-title,
+body.light-mode .work-caption-title {
+  color: #1a1a18;
+}
+
+body.light-mode .work-caption-meta,
+body.light-mode .page-count {
+  color: #6b6b67;
+}
+
+body.light-mode .page-hero {
+  border-bottom-color: #d4cfc7;
+}
+
+body.light-mode .work-img {
+  background: #e8e0d4;
+}
+
+body.light-mode .nav {
+  background: rgba(245, 240, 232, 0.92);
+  border-bottom-color: #d4cfc7;
+}
+
+body.light-mode .nav-logo,
+body.light-mode .nav-links a.active,
+body.light-mode .nav-links a:hover {
+  color: #1a1a18;
+}
         /* Caption below — quiet and small */
         .work-caption {
           display: flex;
@@ -221,10 +273,10 @@ export default function Paintings() {
         <h1 className="page-title fade-up fade-up-delay-1">WORKS</h1>
         <span className="page-count fade-up fade-up-delay-2">{paintings.length} pieces</span>
       </div>
-
       <div className="works-grid">
-        {paintings.map((p, i) => {
-          const inner = (
+  <div ref={triggerRef} style={{ position: 'absolute', top: '140vh' }} />
+  {paintings.map((p, i) => {
+    const inner = (
             <>
               <div className="work-img">
                 <Image
