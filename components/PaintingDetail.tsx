@@ -1,8 +1,7 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 type PaintingDetailProps = {
   title: string;
@@ -15,6 +14,10 @@ type PaintingDetailProps = {
 
 export default function PaintingDetail({ title, year, medium, dimensions, image, statement }: PaintingDetailProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  useEffect(() => {
+  document.body.classList.add("light-mode");
+  return () => document.body.classList.remove("light-mode");
+}, []);
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
   const body = encodeURIComponent(`Hi Chris,\n\nI'm interested in learning more about "${title}" (${medium}, ${dimensions}, ${year}).\n\nPlease let me know if it's available.\n\nThank you`);
 
