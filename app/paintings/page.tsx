@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,18 +40,14 @@ const paintings: Painting[] = [
 
 export default function Paintings() {
   const [lightbox, setLightbox] = useState<Painting | null>(null);
-const triggerRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      document.body.classList.toggle("light-mode", !entry.isIntersecting);
-    },
-    { threshold: 0 }
-  );
-  if (triggerRef.current) observer.observe(triggerRef.current);
+  const handleScroll = () => {
+    document.body.classList.toggle("light-mode", window.scrollY > 200);
+  };
+  window.addEventListener("scroll", handleScroll);
   return () => {
-    observer.disconnect();
+    window.removeEventListener("scroll", handleScroll);
     document.body.classList.remove("light-mode");
   };
 }, []);
@@ -273,7 +268,6 @@ body.light-mode .nav-links a:hover {
         <span className="page-count fade-up fade-up-delay-2">{paintings.length} pieces</span>
       </div>
       <div className="works-grid">
-  <div ref={triggerRef} style={{ position: 'absolute', top: '140vh' }} />
   {paintings.map((p, i) => {
     const inner = (
             <>
