@@ -19,25 +19,25 @@ type Painting = {
 
 const paintings: Painting[] = [
   // — Full pages —
-  { id: 1,  title: "Planes and Trees",      year: "2024", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.png",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000 },
-  { id: 2,  title: "TV in the Land",        year: "2024", medium: "Acrylic on canvas", dimensions: '20" × 24"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",         width: 800, height: 960  },
-  { id: 3,  title: "Still Life with Lemon", year: "2023", medium: "Oil on panel",      dimensions: '12" × 12"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",            width: 800, height: 800  },
-  { id: 4,  title: "Cell TV",               year: "2024", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
-  { id: 5,  title: "Airplane",              year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/airplane.png",         type: "page",     slug: "airplane",         width: 800, height: 1067 },
-  { id: 6,  title: "Computer",              year: "2024", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/computer.jpeg",        type: "page",     slug: "computer",         width: 800, height: 800  },
-  { id: 7,  title: "Breakfast in Miami",    year: "2023", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.png", type: "page",     slug: "breakfastinmiami", width: 800, height: 1000 },
+  { id: 1,  title: "Planes and Trees",      year: "2026", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.png",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000 },
+  { id: 2,  title: "TV in the Land",        year: "2025", medium: "Acrylic on canvas", dimensions: '20" × 24"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",         width: 800, height: 960  },
+  { id: 3,  title: "Still Life with Lemon", year: "2026", medium: "Oil on panel",      dimensions: '12" × 12"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",            width: 800, height: 800  },
+  { id: 4,  title: "Cell TV",               year: "2026", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
+  { id: 5,  title: "Airplane",              year: "2026", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/airplane.png",         type: "page",     slug: "airplane",         width: 800, height: 1067 },
+  { id: 6,  title: "Computer",              year: "2025", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/computer.jpeg",        type: "page",     slug: "computer",         width: 800, height: 800  },
+  { id: 7,  title: "Breakfast in Miami",    year: "2026", medium: "Oil on canvas",     dimensions: '24" × 30"', image: "/images/breakfastinmiami.png", type: "page",     slug: "breakfastinmiami", width: 800, height: 1000 },
   // — Lightbox —
-  { id: 8,  title: "You Are Here",          year: "2024", medium: "Acrylic on canvas", dimensions: '12" × 12"', image: "/images/drain.png",            type: "lightbox",                           width: 800, height: 800  },
-  { id: 9,  title: "Roses I",               year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses.png",            type: "lightbox",                           width: 800, height: 1000 },
-  { id: 10, title: "Roses II",              year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses2.jpeg",          type: "lightbox",                           width: 800, height: 1000 },
-  { id: 11, title: "Scene",                 year: "2023", medium: "Mixed media",       dimensions: '20" × 20"', image: "/images/scene.jpeg",           type: "lightbox",                           width: 800, height: 800  },
-  { id: 12, title: "Square I",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square.jpeg",          type: "lightbox",                           width: 800, height: 800  },
-  { id: 13, title: "Square II",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square2.jpeg",         type: "lightbox",                           width: 800, height: 800  },
-  { id: 14, title: "Square III",            year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square3.jpg",          type: "lightbox",                           width: 800, height: 800  },
-  { id: 15, title: "Square IV",             year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square4.jpeg",         type: "lightbox",                           width: 800, height: 800  },
-  { id: 16, title: "Square V",              year: "2022", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square5.jpeg",         type: "lightbox",                           width: 800, height: 800  },
-  { id: 17, title: "Ghost in the Woods",    year: "2023", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/ghostinwoods.png",     type: "lightbox",                           width: 800, height: 1067 },
-  { id: 18, title: "Dark Trees",            year: "2023", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/darktrees.jpeg",       type: "lightbox",                           width: 800, height: 1000 },
+  { id: 8,  title: "Abstract Trees",        year: "2025", medium: "Acrylic on canvas", dimensions: '12" × 12"', image: "/images/trees.jpeg",            type: "lightbox",                           width: 800, height: 800  },
+  { id: 9,  title: "Roses I",               year: "2026", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses.png",            type: "lightbox",                           width: 800, height: 1000 },
+  { id: 10, title: "Roses II",              year: "2025", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/roses2.jpeg",          type: "lightbox",                           width: 800, height: 1000 },
+  { id: 11, title: "Scene",                 year: "2025", medium: "Mixed media",       dimensions: '20" × 20"', image: "/images/scene.jpeg",           type: "lightbox",                           width: 800, height: 800  },
+  { id: 12, title: "Square I",              year: "2025", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square.jpeg",          type: "lightbox",                           width: 800, height: 800  },
+  { id: 13, title: "Square II",             year: "2026", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square2.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 14, title: "Square III",            year: "2026", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square3.jpg",          type: "lightbox",                           width: 800, height: 800  },
+  { id: 15, title: "Square IV",             year: "2026", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square4.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 16, title: "Square V",              year: "2026", medium: "Acrylic on panel",  dimensions: '10" × 10"', image: "/images/square5.jpeg",         type: "lightbox",                           width: 800, height: 800  },
+  { id: 17, title: "Ghost in the Woods",    year: "2025", medium: "Oil on canvas",     dimensions: '18" × 24"', image: "/images/ghostinwoods.png",     type: "lightbox",                           width: 800, height: 1067 },
+  { id: 18, title: "Dark Trees",            year: "2026", medium: "Oil on canvas",     dimensions: '16" × 20"', image: "/images/darktrees.jpeg",       type: "lightbox",                           width: 800, height: 1000 },
 ];
 
 export default function Paintings() {
