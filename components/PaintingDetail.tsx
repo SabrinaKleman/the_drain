@@ -1,7 +1,7 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type PaintingDetailProps = {
   title: string;
@@ -14,16 +14,13 @@ type PaintingDetailProps = {
 
 export default function PaintingDetail({ title, year, medium, dimensions, image, statement }: PaintingDetailProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  useEffect(() => {
-  document.body.classList.add("light-mode");
-  return () => document.body.classList.remove("light-mode");
-}, []);
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
   const body = encodeURIComponent(`Hi Chris,\n\nI'm interested in learning more about "${title}" (${medium}, ${dimensions}, ${year}).\n\nPlease let me know if it's available.\n\nThank you`);
 
   return (
     <>
       <style>{`
+body { background-color: #f5f0e8; color: #1a1a18; }
         .detail-wrap {
           padding: 8rem 2.5rem 6rem;
           max-width: 1200px;
@@ -36,7 +33,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 0.6rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: #6b6b64;
           margin-bottom: 4rem;
           transition: color 0.2s;
         }
@@ -58,7 +55,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
         .detail-img-wrap {
           position: relative;
           width: 100%;
-          background: var(--dark-surface);
+          background: #e8e0d4;
           cursor: zoom-in;
         }
 
@@ -83,8 +80,8 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 0.5rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          background: var(--black);
-          color: var(--muted);
+          background: #f5f0e8;
+          color: #6b6b64;
           padding: 0.2rem 0.5rem;
           opacity: 0;
           transition: opacity 0.3s;
@@ -99,7 +96,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-family: var(--font-display);
           font-size: clamp(2.5rem, 5vw, 4.5rem);
           letter-spacing: 0.04em;
-          color: var(--off-white);
+          color: #1a1a18;
           line-height: 1;
           margin-bottom: 2rem;
         }
@@ -110,7 +107,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           gap: 0.6rem;
           margin-bottom: 3rem;
           padding-bottom: 3rem;
-          border-bottom: 1px solid var(--mid);
+          border-bottom: 1px solid #d4cfc7;
         }
 
         .detail-meta-row {
@@ -133,7 +130,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-family: var(--font-mono);
           font-size: 0.7rem;
           letter-spacing: 0.05em;
-          color: var(--light);
+          color: #3a3a36;
         }
 
         .detail-statement-label {
@@ -150,7 +147,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 1.05rem;
           font-style: italic;
           line-height: 1.85;
-          color: var(--light);
+          color: #3a3a36;
           margin-bottom: 3.5rem;
         }
 
@@ -160,7 +157,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 0.65rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--black);
+          color: #f5f0e8;
           background: var(--off-white);
           padding: 0.9rem 2rem;
           transition: background 0.2s, color 0.2s;
@@ -175,7 +172,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
         .detail-nav {
           margin-top: 4rem;
           padding-top: 2.5rem;
-          border-top: 1px solid var(--mid);
+          border-top: 1px solid #d4cfc7;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -186,11 +183,11 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 0.6rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: #6b6b64;
           transition: color 0.2s;
         }
 
-        .detail-nav-link:hover { color: var(--off-white); }
+        .detail-nav-link:hover { color: #1a1a18; }
 
         /* Lightbox */
         .lightbox-overlay {
@@ -237,7 +234,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-family: var(--font-serif);
           font-size: 1.2rem;
           font-style: italic;
-          color: var(--off-white);
+          color: #1a1a18;
           margin-bottom: 0.3rem;
         }
 
@@ -246,7 +243,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           font-size: 0.58rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: #6b6b64;
         }
 
         .lightbox-close {
@@ -255,7 +252,7 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           right: 2rem;
           background: none;
           border: none;
-          color: var(--muted);
+          color: #6b6b64;
           font-size: 0.7rem;
           cursor: pointer;
           font-family: var(--font-mono);
@@ -264,57 +261,8 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
           transition: color 0.2s;
         }
 
-        .lightbox-close:hover { color: var(--off-white); }
+        .lightbox-close:hover { color: #1a1a18; }
 
-        body.light-mode .detail-title {
-  color: #1a1a18;
-}
-
-body.light-mode .detail-back {
-  color: #6b6b64;
-}
-
-body.light-mode .detail-back:hover {
-  color: #1a1a18;
-}
-
-body.light-mode .detail-meta-value {
-  color: #3a3a36;
-}
-
-body.light-mode .detail-meta-block {
-  border-bottom-color: #d4cfc7;
-}
-
-body.light-mode .detail-statement {
-  color: #3a3a36;
-}
-
-body.light-mode .detail-img-wrap {
-  background: #e8e0d4;
-}
-
-body.light-mode .detail-nav {
-  border-top-color: #d4cfc7;
-}
-
-body.light-mode .detail-nav-link {
-  color: #6b6b64;
-}
-
-body.light-mode .detail-nav-link:hover {
-  color: #1a1a18;
-}
-
-body.light-mode .inquire-btn {
-  background: #1a1a18;
-  color: #f5f0e8;
-}
-
-body.light-mode .inquire-btn:hover {
-  background: var(--red);
-  color: #f5f0e8;
-}
 
         @media (max-width: 900px) {
           .detail-wrap { padding: 8rem 1.5rem 4rem; }
