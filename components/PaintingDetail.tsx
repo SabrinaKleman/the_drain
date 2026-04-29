@@ -266,6 +266,56 @@ export default function PaintingDetail({ title, year, medium, dimensions, image,
 
         .lightbox-close:hover { color: var(--off-white); }
 
+        body.light-mode .detail-title {
+  color: #1a1a18;
+}
+
+body.light-mode .detail-back {
+  color: #6b6b64;
+}
+
+body.light-mode .detail-back:hover {
+  color: #1a1a18;
+}
+
+body.light-mode .detail-meta-value {
+  color: #3a3a36;
+}
+
+body.light-mode .detail-meta-block {
+  border-bottom-color: #d4cfc7;
+}
+
+body.light-mode .detail-statement {
+  color: #3a3a36;
+}
+
+body.light-mode .detail-img-wrap {
+  background: #e8e0d4;
+}
+
+body.light-mode .detail-nav {
+  border-top-color: #d4cfc7;
+}
+
+body.light-mode .detail-nav-link {
+  color: #6b6b64;
+}
+
+body.light-mode .detail-nav-link:hover {
+  color: #1a1a18;
+}
+
+body.light-mode .inquire-btn {
+  background: #1a1a18;
+  color: #f5f0e8;
+}
+
+body.light-mode .inquire-btn:hover {
+  background: var(--red);
+  color: #f5f0e8;
+}
+
         @media (max-width: 900px) {
           .detail-wrap { padding: 8rem 1.5rem 4rem; }
           .detail-grid { grid-template-columns: 1fr; gap: 3rem; }
