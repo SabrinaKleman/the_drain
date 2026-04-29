@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ReactNode } from "react";
 
 type PaintingDetailProps = {
   title: string;
@@ -9,7 +10,7 @@ type PaintingDetailProps = {
   medium: string;
   dimensions: string;
   image: string;
-  statement: string;
+  statement: ReactNode;
   extraImages?: string[];
 };
 
