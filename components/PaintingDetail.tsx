@@ -158,7 +158,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: #f5f0e8;
-          background: var(--off-white);
+          background: #1a1a18;
           padding: 0.9rem 2rem;
           transition: background 0.2s, color 0.2s;
           cursor: crosshair;

@@ -85,7 +85,7 @@ useEffect(() => {
   grid-template-columns: 1fr;
   gap: 6rem;
   padding: 0 3rem;
-  max-width: 700px;
+  max-width: 80%;
   margin: 0 auto;
   position: relative; /* add this */
 }
