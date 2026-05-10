@@ -10,7 +10,7 @@ export default function CellTV() {
       image="/images/celltv.jpg"
       statement={
   <>
-    <p>
+    {/* <p>
       The phone is now the television. The television was once the window.
       The window was once the only way to see the world outside. Each
       generation gets a smaller rectangle to look through and calls it
@@ -25,7 +25,7 @@ export default function CellTV() {
       move along cytoskeletal tracks (microtubules or actin), acting as
       essential freight haulers for organelles, vesicles, and chromosomes,
       ensuring proper organization and communication within the cell.
-    </p>
+    </p> */}
   </>
 }
     extraImages={[
