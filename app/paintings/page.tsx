@@ -14,11 +14,12 @@ type Painting = {
   slug?: string;
   width: number;
   height: number;
+  sold?: boolean;
 };
 
 const paintings: Painting[] = [
   // — Full pages —
-  { id: 1,  title: "Planes and Trees",      year: "2026", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.jpeg",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000 },
+  { id: 1,  title: "Planes and Trees",      year: "2026", medium: "Oil on canvas",     dimensions: '24" × 36"', image: "/images/planesandtrees.jpeg",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000, sold: true },
   { id: 2,  title: "TV in the Land",        year: "2025", medium: "Acrylic on canvas", dimensions: '20" × 24"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",         width: 800, height: 960  },
   { id: 3,  title: "Still Life with Lemon", year: "2026", medium: "Oil on panel",      dimensions: '12" × 12"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",            width: 800, height: 800  },
   { id: 4,  title: "Cell TV",               year: "2026", medium: "Acrylic on canvas", dimensions: '16" × 20"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
@@ -178,7 +179,25 @@ body.light-mode .nav-links a:hover {
           color: var(--muted);
           line-height: 1.8;
         }
-
+         /* Sold */
+.sold-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  background: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
+}
         /* Lightbox */
         .lightbox-overlay {
           position: fixed;
@@ -273,7 +292,8 @@ body.light-mode .nav-links a:hover {
   {paintings.map((p, i) => {
     const inner = (
             <>
-              <div className="work-img">
+              <div className="work-img" style={{ position: 'relative' }}>
+              {p.sold && <div className="sold-badge">SOLD</div>}
                 <Image
                   src={p.image}
                   alt={p.title}
