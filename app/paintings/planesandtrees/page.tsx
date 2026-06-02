@@ -3,6 +3,7 @@ import PaintingDetail from "@/components/PaintingDetail";
 export default function PlanesAndTrees() {
   return (
     <PaintingDetail
+      sold={true}
       title="Planes and Trees"
       year="2024"
       medium="Oil on canvas"

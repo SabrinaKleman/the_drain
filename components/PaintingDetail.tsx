@@ -12,9 +12,10 @@ type PaintingDetailProps = {
   image: string;
   statement: ReactNode;
   extraImages?: string[];
+  sold?: boolean;
 };
 
-export default function PaintingDetail({ title, year, medium, dimensions, image, statement, extraImages = [] }: PaintingDetailProps) {
+export default function PaintingDetail({ title, year, medium, dimensions, image, statement, extraImages = [], sold = false }: PaintingDetailProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 const allImages = [image, ...extraImages];
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
@@ -214,7 +215,26 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         }
 
         .detail-nav-link:hover { color: #1a1a18; }
-
+        
+        /* Sold */
+.sold-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  background: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
+}
         /* Lightbox */
         .lightbox-overlay {
           position: fixed;
@@ -320,6 +340,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         <div className="detail-grid">
           <div className="detail-image-col fade-up fade-up-delay-1">
             <div className="detail-img-wrap" onClick={() => setLightboxIndex(0)}>
+              {sold && <div className="sold-badge">SOLD</div>}
               <Image
                 src={image}
                 alt={title}
