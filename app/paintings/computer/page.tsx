@@ -18,6 +18,6 @@ export default function Computer() {
       In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
     </p> */}
   </>
-}
+}/>
   );
 }
