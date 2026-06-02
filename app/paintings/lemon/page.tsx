@@ -8,7 +8,21 @@ export default function Lemon() {
       medium="Oil on panel"
       dimensions='12" × 12"'
       image="/images/lemon.jpg"
-      statement="The lemon as subject has a long history in painting — a test of technique, a symbol of the transient. This one isn't that. It's just a lemon on a counter, the kind that sits there for two weeks getting drier and more itself. Painting ordinary things seriously feels like the most honest thing to do right now."
-    />
+      statement={/* <p>
+      The phone is now the television. The television was once the window.
+      The window was once the only way to see the world outside. Each
+      generation gets a smaller rectangle to look through and calls it
+      progress. This painting is about that shrinkage — not with judgment,
+      just with attention.
+    </p>
+<br />
+    <p>
+      Cellular motors are specialized proteins—kinesin, dynein, and myosin—
+      that convert chemical energy (ATP) into mechanical work to drive
+      intracellular transport, cell division, and muscle contraction. They
+      move along cytoskeletal tracks (microtubules or actin), acting as
+      essential freight haulers for organelles, vesicles, and chromosomes,
+      ensuring proper organization and communication within the cell.
+    </p> */}/>
   );
 }
