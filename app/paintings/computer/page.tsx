@@ -8,22 +8,16 @@ export default function Computer() {
       medium="Acrylic on panel"
       dimensions='10" × 10"'
       image="/images/computer.jpeg"
-      statement={/* <p>
-      The phone is now the television. The television was once the window.
-      The window was once the only way to see the world outside. Each
-      generation gets a smaller rectangle to look through and calls it
-      progress. This painting is about that shrinkage — not with judgment,
-      just with attention.
+      statement={
+  <>
+    {/* <p>
+      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
     </p>
 <br />
     <p>
-      Cellular motors are specialized proteins—kinesin, dynein, and myosin—
-      that convert chemical energy (ATP) into mechanical work to drive
-      intracellular transport, cell division, and muscle contraction. They
-      move along cytoskeletal tracks (microtubules or actin), acting as
-      essential freight haulers for organelles, vesicles, and chromosomes,
-      ensuring proper organization and communication within the cell.
+      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
     </p> */}
-    />
+  </>
+}
   );
 }

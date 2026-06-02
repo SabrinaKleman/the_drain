@@ -8,8 +8,18 @@ export default function BreakfastInMiami() {
       medium="Oil on canvas"
       dimensions='24" × 30"'
       image="/images/breakfastinmiami.jpeg"
-      statement="Miami in the morning has a specific quality of light that doesn't exist anywhere else — too bright too early, everything slightly overexposed. This painting started as a document of a meal and became something about the city itself: the heat already building at 8am, the sense that the day is happening faster than you're ready for."
-    extraImages={[
+   statement={
+  <>
+    {/* <p>
+      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
+    </p>
+<br />
+    <p>
+      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
+    </p> */}
+  </>
+}
+   extraImages={[
     "/images/breakfastinmiami2.jpeg",
   ]}/>
   );
