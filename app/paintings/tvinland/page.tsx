@@ -3,10 +3,10 @@ import PaintingDetail from "@/components/PaintingDetail";
 export default function TVInTheLand() {
   return (
     <PaintingDetail
-      title="TV in the Land"
-      year="2024"
-      medium="Acrylic on canvas"
-      dimensions='20" × 24"'
+      title="The Television Landscape"
+      year="2025"
+      medium="Oil on canvas"
+      dimensions='30" × 40"'
       image="/images/tvinland.jpeg"
       statement={
   <>

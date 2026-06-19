@@ -4,9 +4,9 @@ export default function Lemon() {
   return (
     <PaintingDetail
       title="Still Life with Lemon"
-      year="2023"
+      year="2025"
       medium="Oil on panel"
-      dimensions='12" × 12"'
+      dimensions='11" × 14"'
       image="/images/lemon.jpg"
       statement={
   <>

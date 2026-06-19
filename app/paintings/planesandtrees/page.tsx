@@ -7,7 +7,7 @@ export default function PlanesAndTrees() {
       title="Planes and Trees"
       year="2024"
       medium="Oil on canvas"
-      dimensions='24" × 36"'
+      dimensions='38" × 60"'
       image="/images/planesandtrees.jpeg"
       statement={
   <>

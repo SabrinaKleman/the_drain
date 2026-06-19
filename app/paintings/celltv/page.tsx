@@ -3,10 +3,10 @@ import PaintingDetail from "@/components/PaintingDetail";
 export default function CellTV() {
   return (
     <PaintingDetail
-      title="Cell TV"
-      year="2024"
-      medium="Acrylic on canvas"
-      dimensions='16" × 20"'
+      title="Running out of Time into First"
+      year="2025"
+      medium="Oil on canvas"
+      dimensions='30" × 40"'
       image="/images/celltv.jpg"
       statement={
   <>

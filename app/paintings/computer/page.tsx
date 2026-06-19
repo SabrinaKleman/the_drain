@@ -3,10 +3,10 @@ import PaintingDetail from "@/components/PaintingDetail";
 export default function Computer() {
   return (
     <PaintingDetail
-      title="Computer"
-      year="2024"
-      medium="Acrylic on panel"
-      dimensions='10" × 10"'
+      title="Command"
+      year="2025"
+      medium="Oil on panel"
+      dimensions='11" × 14"'
       image="/images/computer.jpeg"
       statement={
   <>
