@@ -6,7 +6,7 @@ export default function BreakfastInMiami() {
       title="Breakfast in Miami"
       year="2023"
       medium="Oil on canvas"
-      dimensions='24" × 30"'
+      dimensions='30" × 40"'
       image="/images/breakfastinmiami.jpeg"
    statement={
   <>
