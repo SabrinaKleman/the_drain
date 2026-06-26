@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featuredWorks = [
-  { id: 1, title: "Cellular Motor", year: "2026", medium: "Oil on canvas", image: "/images/celltv.jpg", size: "large" },
-  { id: 2, title: "Life and Lemons", year: "2026", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
+  { id: 1,  title: "The Box",      year: "2026", medium: "Oil on canvas", image: "/images/planesandtrees.jpeg", size: "large" },
+  { id: 2, title: "Still Life with Lemon", year: "2026", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
   { id: 3, title: "Dark Scene", year: "2024", medium: "Oil on canvas", image: "/images/scene.jpeg", size: "small" },
   { id: 4, title: "Square V", year: "2023", medium: "Oil on canvas", image: "/images/square5.jpeg", size: "medium" },
   { id: 5, title: "Roses", year: "2023", medium: "Oil on canvas", image: "/images/roses.png", size: "medium" },
