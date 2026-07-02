@@ -4,21 +4,15 @@ export default function PlanesAndTrees() {
   return (
     <PaintingDetail
       sold={true}
-      title="Planes and Trees"
-      year="2024"
+      title="Cube Squared"
+      year="2026"
       medium="Oil on canvas"
       dimensions='38" × 60"'
       image="/images/planesandtrees.jpeg"
-      statement={
-  <>
-    {/* <p>
-      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
-    </p>
-<br />
-    <p>
-      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
-    </p> */}
-  </>
+      description={
+        <p>This piece asks up front (rudely): Since when did cubism stop being about the cube? How many two dimensional planes does one canvas’s two dimensional plane really need? Is reality itself imposed on a dimensional plane we’re eternally tethered to, forever unable to control the more fundamental forces of the higher dimensional planes which impose their will on us without our consent? This piece takes everything that is funny about that idea and makes it look very cool to your eyes. 
+        </p>}
+     
 }  extraImages={[
     "/images/planesandtrees2.jpeg",
   ]}/>

@@ -8,17 +8,16 @@ export default function BreakfastInMiami() {
       medium="Oil on canvas"
       dimensions='30" × 40"'
       image="/images/breakfastinmiami.jpeg"
-   statement={
-  <>
-    {/* <p>
-      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
-    </p>
-<br />
-    <p>
-      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
-    </p> */}
-  </>
-}
+   descriptionIntellectuals={
+        <p>Reinventing Hockney’s apocryphal “Breakfast in Malibu”, the artist treats perspective like a child; putting perspective in “time out”, forcing it to add money to the swear jar, and banishing it to its cold, lonely room. In turn, with perspective infantilized, the viewer is left helpless, grasping at straws to develop a whole new “perspective” in its place. A love letter to the artist’s birthplace of Miami and the Pacific’s little brother, the humble, often totally forgotten, Atlantic Ocean, “Breakfast in Miami” overwhelms you with nature.  
+
+</p>
+      }
+      descriptionCommon={
+        <p>The painting almost looks real for a second, but when you look closer, you can see there are brushstrokes… that’s how you know this is for sure art. Pretty sure the artist probably isn’t going for full photorealism; which could almost be considered too niche these days. 
+
+</p>
+      }
    extraImages={[
     "/images/breakfastinmiami2.jpeg",
   ]}/>
