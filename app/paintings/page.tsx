@@ -147,7 +147,7 @@ body.light-mode .work-img {
 }
 
 body.light-mode .nav {
-  background: rgba(245, 240, 232, 0.92);
+  background: rgba(255, 255, 255, 1);
   border-bottom-color: #d4cfc7;
 }
 
