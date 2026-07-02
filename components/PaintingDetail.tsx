@@ -10,14 +10,27 @@ type PaintingDetailProps = {
   medium: string;
   dimensions: string;
   image: string;
-  statement: ReactNode;
+  description?: ReactNode;
+  descriptionIntellectuals?: ReactNode;
+  descriptionCommon?: ReactNode;
+  descriptionBuyerRich?: ReactNode;
+  descriptionBuyerPoor?: ReactNode;
   extraImages?: string[];
   sold?: boolean;
 };
 
-export default function PaintingDetail({ title, year, medium, dimensions, image, statement, extraImages = [], sold = false }: PaintingDetailProps) {
+export default function PaintingDetail({
+  title, year, medium, dimensions, image,
+  description,
+  descriptionIntellectuals,
+  descriptionCommon,
+  descriptionBuyerRich,
+  descriptionBuyerPoor,
+  extraImages = [],
+  sold = false
+}: PaintingDetailProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-const allImages = [image, ...extraImages];
+  const allImages = [image, ...extraImages];
   const subject = encodeURIComponent(`Inquiry: ${title} (${year})`);
   const body = encodeURIComponent(`Hi Chris,\n\nI'm interested in learning more about "${title}" (${medium}, ${dimensions}, ${year}).\n\nPlease let me know if it's available.\n\nThank you`);
 
@@ -152,31 +165,35 @@ body { background-color: #f5f0e8; color: #1a1a18; }
           font-style: italic;
           line-height: 1.85;
           color: #3a3a36;
-          margin-bottom: 3.5rem;
         }
+
+        .detail-description-block {
+          margin-bottom: 2.5rem;
+        }
+
         .extra-images {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          margin-top: 0.75rem;
+        }
 
-.extra-img-wrap {
-  width: 100%;
-  background: #e8e0d4;
-  cursor: zoom-in;
-}
+        .extra-img-wrap {
+          width: 100%;
+          background: #e8e0d4;
+          cursor: zoom-in;
+        }
 
-.extra-img-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: opacity 0.4s ease;
-}
+        .extra-img-wrap img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: opacity 0.4s ease;
+        }
 
-.extra-img-wrap:hover img {
-  opacity: 0.75;
-}
+        .extra-img-wrap:hover img {
+          opacity: 0.75;
+        }
 
         .inquire-btn {
           display: inline-block;
@@ -215,27 +232,26 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         }
 
         .detail-nav-link:hover { color: #1a1a18; }
-        
-        /* Sold */
-.sold-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 60px;
-  height: 60px;
-  background: var(--red);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  color: white;
-  z-index: 10;
-  pointer-events: none;
-}
-        /* Lightbox */
+
+        .sold-badge {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          width: 60px;
+          height: 60px;
+          background: var(--red);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: var(--font-mono);
+          font-size: 0.55rem;
+          letter-spacing: 0.15em;
+          color: white;
+          z-index: 10;
+          pointer-events: none;
+        }
+
         .lightbox-overlay {
           position: fixed;
           inset: 0;
@@ -308,24 +324,25 @@ body { background-color: #f5f0e8; color: #1a1a18; }
         }
 
         .lightbox-close:hover { color: #1a1a18; }
-.lb-prev, .lb-next {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 1.2rem;
-  cursor: pointer;
-  font-family: var(--font-mono);
-  padding: 1rem;
-  transition: color 0.2s;
-  z-index: 501;
-}
 
-.lb-prev { left: 1.5rem; }
-.lb-next { right: 1.5rem; }
-.lb-prev:hover, .lb-next:hover { color: var(--off-white); }
+        .lb-prev, .lb-next {
+          position: fixed;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: var(--muted);
+          font-size: 1.2rem;
+          cursor: pointer;
+          font-family: var(--font-mono);
+          padding: 1rem;
+          transition: color 0.2s;
+          z-index: 501;
+        }
+
+        .lb-prev { left: 1.5rem; }
+        .lb-next { right: 1.5rem; }
+        .lb-prev:hover, .lb-next:hover { color: var(--off-white); }
 
         @media (max-width: 900px) {
           .detail-wrap { padding: 8rem 1.5rem 4rem; }
@@ -384,14 +401,41 @@ body { background-color: #f5f0e8; color: #1a1a18; }
                 <span className="detail-meta-value">{dimensions}</span>
               </div>
             </div>
-
-            <div className="fade-up fade-up-delay-3">
-              <p className="detail-statement-label">Statement</p>
-              <div className="detail-statement">{statement}</div>
+<div className="fade-up fade-up-delay-3">
+              {description && (
+                <div className="detail-description-block">
+                  <p className="detail-statement-label">Description</p>
+                  <div className="detail-statement">{description}</div>
+                </div>
+              )}
+              {descriptionIntellectuals && (
+                <div className="detail-description-block">
+                  <p className="detail-statement-label">Description (Intellectuals)</p>
+                  <div className="detail-statement">{descriptionIntellectuals}</div>
+                </div>
+              )}
+              {descriptionCommon && (
+                <div className="detail-description-block">
+                  <p className="detail-statement-label">Description (Common)</p>
+                  <div className="detail-statement">{descriptionCommon}</div>
+                </div>
+              )}
+              {descriptionBuyerRich && (
+                <div className="detail-description-block">
+                  <p className="detail-statement-label">Description (Buyer — Rich)</p>
+                  <div className="detail-statement">{descriptionBuyerRich}</div>
+                </div>
+              )}
+              {descriptionBuyerPoor && (
+                <div className="detail-description-block">
+                  <p className="detail-statement-label">Description (Buyer — Poor)</p>
+                  <div className="detail-statement">{descriptionBuyerPoor}</div>
+                </div>
+              )}
             </div>
 
             <div className="fade-up fade-up-delay-4">
-              <a
+              
                 href={`mailto:cgiusto1@gmail.com?subject=${subject}&body=${body}`}
                 className="inquire-btn"
               >

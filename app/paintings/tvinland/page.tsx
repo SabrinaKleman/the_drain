@@ -8,15 +8,23 @@ export default function TVInTheLand() {
       medium="Oil on canvas"
       dimensions='30" × 40"'
       image="/images/tvinland.jpeg"
-      statement={
+    statement={
   <>
-    {/* <p>
-      Medieval painting (c. 500–1400 AD) evolved from early Christian and Roman styles, prioritizing spiritual symbolism over realism to educate a largely illiterate audience. Dominated by religious narratives, it thrived through illuminated manuscripts, frescos, and panel painting, evolving from stylized Byzantine forms to the more naturalistic, detailed approaches of the late Gothic period.
-    </p>
-<br />
     <p>
-      In-flight entertainment (IFE) evolved from, projected films in the 1920s to personal seatback screens introduced by Northwest Airlines in 1988. Early, primitive screens were 2.7-inch LCDs developed by Airvision, offering six channels, which paved the way for modern, on-demand, and interactive HD, touchscreen displays on long-haul flights.
-    </p> */}
+      <strong>Description (Intellectuals):</strong> Hopscotching the intersections of technology, nature, religion and the Italian Renaissance...
+    </p>
+    <br />
+    <p>
+      <strong>Description (Common):</strong> The painting is trippy, very trippy, man...
+    </p>
+    <br />
+    <p>
+      <strong>Description (Buyer - rich):</strong> A poll of bankers, lawyers and titans of finance agree...
+    </p>
+    <br />
+    <p>
+      <strong>Description (Buyer - poor):</strong> N/A
+    </p>
   </>
 }/>
   );
