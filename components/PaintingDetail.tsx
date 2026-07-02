@@ -37,7 +37,7 @@ export default function PaintingDetail({
   return (
     <>
       <style>{`
-body { background-color: #f5f0e8; color: #1a1a18; }
+body { background-color: #ffffff; color: #1a1a18; }
         .detail-wrap {
           padding: 8rem 2.5rem 6rem;
           max-width: 1200px;
@@ -97,7 +97,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
           font-size: 0.5rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          background: #f5f0e8;
+          background: #ffffff;
           color: #6b6b64;
           padding: 0.2rem 0.5rem;
           opacity: 0;
@@ -201,7 +201,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
           font-size: 0.65rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: #f5f0e8;
+          color: #ffffff;
           background: #1a1a18;
           padding: 0.9rem 2rem;
           transition: background 0.2s, color 0.2s;
