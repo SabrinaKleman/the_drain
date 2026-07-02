@@ -4,7 +4,7 @@ export default function CellTV() {
   return (
     <PaintingDetail
       title="Running out of Time into First"
-      year="2025"
+      year="2026"
       medium="Oil on canvas"
       dimensions='30" × 40"'
       image="/images/celltv.jpg"

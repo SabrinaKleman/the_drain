@@ -4,7 +4,7 @@ export default function BreakfastInMiami() {
   return (
     <PaintingDetail
       title="Breakfast in Miami"
-      year="2023"
+      year="2026"
       medium="Oil on canvas"
       dimensions='30" × 40"'
       image="/images/breakfastinmiami.jpeg"
@@ -14,7 +14,7 @@ export default function BreakfastInMiami() {
 </p>
       }
       descriptionCommon={
-        <p>The painting almost looks real for a second, but when you look closer, you can see there are brushstrokes… that’s how you know this is for sure art. Pretty sure the artist probably isn’t going for full photorealism; which could almost be considered too niche these days. 
+        <p>This work is about the motion of the ocean.
 
 </p>
       }

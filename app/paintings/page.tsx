@@ -19,7 +19,7 @@ type Painting = {
 
 const paintings: Painting[] = [
   // — Full pages —
-  { id: 1,  title: "Planes and Trees",      year: "2026", medium: "Oil on canvas",     dimensions: '38" × 60"', image: "/images/planesandtrees.jpeg",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000, sold: true },
+  { id: 1,  title: "Cube Squared",      year: "2026", medium: "Oil on canvas",     dimensions: '38" × 60"', image: "/images/planesandtrees.jpeg",   type: "page",     slug: "planesandtrees",   width: 800, height: 1000, sold: true },
   { id: 2,  title: "Television Landscape",        year: "2025", medium: "Oil on canvas", dimensions: '30" × 40"', image: "/images/tvinland.jpeg",        type: "page",     slug: "tvinland",         width: 800, height: 960  },
   { id: 3,  title: "Still Life with Lemon", year: "2026", medium: "Oil on canvas",      dimensions: '11" × 14"', image: "/images/lemon.jpg",            type: "page",     slug: "lemon",            width: 800, height: 800  },
   { id: 4,  title: "Running out of Time into First",               year: "2026", medium: "Oil on canvas", dimensions: '30" × 40"', image: "/images/celltv.jpg",           type: "page",     slug: "celltv",           width: 800, height: 1000 },
