@@ -439,7 +439,7 @@ body { background-color: #f5f0e8; color: #1a1a18; }
                 href={`mailto:cgiusto1@gmail.com?subject=${subject}&body=${body}`}
                 className="inquire-btn"
               >
-                Inquire about this work →
+                Inquire about this work &#8594;
               </a>
             </div>
 
