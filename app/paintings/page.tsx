@@ -124,7 +124,7 @@ body {
 }
 
 body.light-mode {
-  background-color: #f5f0e8;
+  background-color: #ffffff;
   color: #1a1a18;
 }
 
