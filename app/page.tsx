@@ -151,7 +151,7 @@ export default function Home() {
           font-family: var(--font-mono);
           font-size: 0.7rem;
         font-weight: 400;
-          color: var(--mid);
+          color: var(--muted);
         }
 
         .grid {

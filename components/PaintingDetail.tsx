@@ -165,7 +165,7 @@ body { background-color: #ffffff; color: #1a1a18; }
 
         .detail-statement {
           font-family: var(--font-serif);
-          font-size: 1rem;
+          font-size: .8rem;
         font-weight: 400;
           font-style: italic;
           line-height: 1.85;
