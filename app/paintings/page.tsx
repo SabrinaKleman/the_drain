@@ -163,7 +163,8 @@ body.light-mode .nav-links a:hover {
 
         .work-caption-title {
           font-family: var(--font-serif);
-          font-size: 0.9rem;
+          font-size: 0.7rem;
+        font-weight: 400;
           font-style: italic;
           color: var(--off-white);
           line-height: 1.3;
@@ -171,8 +172,9 @@ body.light-mode .nav-links a:hover {
 
         .work-caption-meta {
           font-family: var(--font-mono);
-          font-size: 0.55rem;
-          letter-spacing: 0.12em;
+          font-size: 0.7rem;
+        font-weight: 500;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
           line-height: 1.8;
@@ -190,8 +192,9 @@ body.light-mode .nav-links a:hover {
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: white;
   z-index: 10;
   pointer-events: none;
@@ -241,6 +244,7 @@ body.light-mode .nav-links a:hover {
           font-family: var(--font-serif);
           font-size: 1.1rem;
           font-style: italic;
+        font-weight: 400;
           color: var(--off-white);
           margin-bottom: 0.3rem;
         }

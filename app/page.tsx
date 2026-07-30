@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featuredWorks = [
-  { id: 1,  title: "Cube Squared",      year: "2026", medium: "Oil on canvas", image: "/images/planesandtrees.jpeg", size: "large" },
+  { id: 1,  title: "Cube Squared",  year: "2026", medium: "Oil on canvas", image: "/images/planesandtrees.jpeg", size: "large" },
   { id: 2, title: "Still Life with Lemon", year: "2026", medium: "Oil on canvas", image: "/images/lemon.jpg", size: "small" },
   { id: 3, title: "Dark Scene", year: "2024", medium: "Oil on canvas", image: "/images/scene.jpeg", size: "small" },
   { id: 4, title: "Square V", year: "2023", medium: "Oil on canvas", image: "/images/square5.jpeg", size: "medium" },
@@ -68,8 +68,8 @@ export default function Home() {
 
         .hero-artist {
           font-family: var(--font-mono);
-          font-size: 0.65rem;
-          letter-spacing: 0.2em;
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
           margin-bottom: 1rem;
@@ -78,8 +78,8 @@ export default function Home() {
         .hero-cta {
           display: inline-block;
           font-family: var(--font-mono);
-          font-size: 0.65rem;
-          letter-spacing: 0.15em;
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--off-white);
           border: 1px solid var(--mid);
@@ -98,8 +98,8 @@ export default function Home() {
           left: 50%;
           transform: translateX(-50%);
           font-family: var(--font-mono);
-          font-size: 0.55rem;
-          letter-spacing: 0.2em;
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
           display: flex;
@@ -138,15 +138,15 @@ export default function Home() {
 
         .section-label {
           font-family: var(--font-mono);
-          font-size: 0.6rem;
-          letter-spacing: 0.25em;
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
         }
 
         .section-count {
           font-family: var(--font-mono);
-          font-size: 0.6rem;
+          font-size: 0.7rem;
           color: var(--mid);
         }
 
@@ -207,8 +207,8 @@ export default function Home() {
 
         .grid-item-meta {
           font-family: var(--font-mono);
-          font-size: 0.55rem;
-          letter-spacing: 0.12em;
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--light);
         }
