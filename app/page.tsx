@@ -69,6 +69,7 @@ export default function Home() {
         .hero-artist {
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
@@ -79,6 +80,7 @@ export default function Home() {
           display: inline-block;
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--off-white);
@@ -139,6 +141,7 @@ export default function Home() {
         .section-label {
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--muted);
@@ -147,6 +150,7 @@ export default function Home() {
         .section-count {
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400;
           color: var(--mid);
         }
 
@@ -200,6 +204,7 @@ export default function Home() {
         .grid-item-title {
           font-family: var(--font-serif);
           font-size: 1rem;
+        font-weight: 400;
           font-style: italic;
           color: var(--off-white);
           margin-bottom: 0.2rem;
@@ -208,6 +213,7 @@ export default function Home() {
         .grid-item-meta {
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--light);

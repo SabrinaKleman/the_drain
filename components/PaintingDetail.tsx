@@ -113,7 +113,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           font-family: var(--font-display);
           font-size: clamp(2.5rem, 5vw, 4.5rem);
           letter-spacing: 0.04em;
-          color: #1a1a18;
+          color: #ffffff;
           line-height: 1;
           margin-bottom: 2rem;
         }
@@ -137,6 +137,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           font-family: var(--font-mono);
           font-size: 0.55rem;
           letter-spacing: 0.2em;
+        font-weight: 400;
           text-transform: uppercase;
           color: var(--red);
           width: 80px;
@@ -146,6 +147,7 @@ body { background-color: #ffffff; color: #1a1a18; }
         .detail-meta-value {
           font-family: var(--font-mono);
           font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.05em;
           color: #3a3a36;
         }
