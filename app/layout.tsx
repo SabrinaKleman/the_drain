@@ -6,6 +6,10 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "The Drain",
   description: "Works by Chris Giusto.",
+  icons: {
+    icon: "/favicon.png", // or /favicon.ico
+    apple: "/favicon.png", // for Apple devices
+  },
 };
 
 export default function RootLayout({
