@@ -31,7 +31,7 @@ export default function Footer() {
           font-size: 0.6rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: var(--black);
           transition: color 0.2s;
         }
 

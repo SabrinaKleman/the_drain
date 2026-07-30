@@ -205,7 +205,6 @@ export default function Home() {
           font-family: var(--font-display);
           font-size: 1rem;
         font-weight: 400;
-          font-style: italic;
           color: var(--off-white);
           margin-bottom: 0.2rem;
         }
