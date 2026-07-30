@@ -76,7 +76,7 @@ useEffect(() => {
           font-family: var(--font-mono);
           font-size: 0.6rem;
           letter-spacing: 0.2em;
-          color: var(--muted);
+          color: var(--mid);
         }
 
         /* One-column editorial grid */
@@ -176,7 +176,7 @@ body.light-mode .nav-links a:hover {
         font-weight: 500;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: var(--mid);
           line-height: 1.8;
         }
          /* Sold */
