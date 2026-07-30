@@ -55,7 +55,7 @@ export default function Footer() {
         <span className="footer-name">THE <span>DRAIN</span></span>
         <div className="footer-right">
           <a href="https://www.instagram.com/the_drain/" target="_blank" rel="noopener noreferrer" className="footer-ig">
-            ↗ Instagram
+            {"↗\uFE0E"} Instagram
           </a>
           <span className="footer-copy">© {new Date().getFullYear()} Chris Giusto</span>
         </div>

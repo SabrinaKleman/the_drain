@@ -153,10 +153,10 @@ export default function About() {
             <p className="contact-label">Find the drain</p>
             <div className="contact-links">
               <a href="https://www.instagram.com/the_drain/" target="_blank" rel="noopener noreferrer" className="contact-link">
-                ↗ @the_drain on Instagram
+                {"↗\uFE0E"} @the_drain on Instagram
               </a>
-              <a href="mailto:hello@thedrain.art" className="contact-link">
-                hello@thedrain.art
+              <a href="mailto:thedrainart@gmail.com" className="contact-link">
+                thedrainart@gmail.com
               </a>
             </div>
           </div>

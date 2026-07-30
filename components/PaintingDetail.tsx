@@ -373,7 +373,7 @@ body { background-color: #ffffff; color: #1a1a18; }
                 height={1600}
                 style={{ width: '100%', height: 'auto' }}
               />
-              <span className="detail-img-hint">Expand ↗</span>
+              <span className="detail-img-hint">Expand ↗&#xFE0E;</span>
             </div>
             {extraImages.length > 0 && (
   <div className="extra-images">
