@@ -80,7 +80,7 @@ export default function Home() {
           display: inline-block;
           font-family: var(--font-mono);
           font-size: 0.7rem;
-        font-weight: 400
+        font-weight: 400;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--off-white);
@@ -202,7 +202,7 @@ export default function Home() {
         .grid-item:hover .grid-item-overlay { opacity: 1; }
 
         .grid-item-title {
-          font-family: var(--font-serif);
+          font-family: var(--font-display);
           font-size: 1rem;
         font-weight: 400;
           font-style: italic;

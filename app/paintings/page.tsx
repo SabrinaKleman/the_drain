@@ -242,10 +242,9 @@ body.light-mode .nav-links a:hover {
         }
 
         .lightbox-title {
-          font-family: var(--font-serif);
+          font-family: var(--font-display);
           font-size: 1.1rem;
-          font-style: italic;
-        font-weight: 400;
+          font-style: normal;
           color: var(--off-white);
           margin-bottom: 0.3rem;
         }
@@ -253,9 +252,10 @@ body.light-mode .nav-links a:hover {
         .lightbox-meta {
           font-family: var(--font-mono);
           font-size: 0.55rem;
-          letter-spacing: 0.15em;
+        font-weight: 400;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: var(--off-white);
         }
 
         .lightbox-close {
