@@ -152,8 +152,9 @@ body { background-color: #ffffff; color: #1a1a18; }
 
         .detail-statement-label {
           font-family: var(--font-mono);
-          font-size: 0.55rem;
-          letter-spacing: 0.2em;
+          font-size: 0.7rem;
+        font-weight: 500;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--red);
           margin-bottom: 1.25rem;
@@ -162,6 +163,7 @@ body { background-color: #ffffff; color: #1a1a18; }
         .detail-statement {
           font-family: var(--font-serif);
           font-size: 1rem;
+        font-weight: 400;
           font-style: italic;
           line-height: 1.85;
           color: #3a3a36;
@@ -199,6 +201,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           display: inline-block;
           font-family: var(--font-mono);
           font-size: 0.65rem;
+        font-weight: 400;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: #ffffff;
@@ -225,6 +228,7 @@ body { background-color: #ffffff; color: #1a1a18; }
         .detail-nav-link {
           font-family: var(--font-mono);
           font-size: 0.6rem;
+        font-weight: 400;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: #6b6b64;
@@ -246,6 +250,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           justify-content: center;
           font-family: var(--font-mono);
           font-size: 0.55rem;
+        font-weight: 300;
           letter-spacing: 0.15em;
           color: white;
           z-index: 10;
@@ -293,16 +298,16 @@ body { background-color: #ffffff; color: #1a1a18; }
         }
 
         .lightbox-title {
-          font-family: var(--font-serif);
+          font-family: var(--font-display);
           font-size: 1.2rem;
-          font-style: italic;
           color: #1a1a18;
           margin-bottom: 0.3rem;
         }
 
         .lightbox-meta {
           font-family: var(--font-mono);
-          font-size: 0.58rem;
+          font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: #6b6b64;
