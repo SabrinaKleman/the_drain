@@ -113,7 +113,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           font-family: var(--font-display);
           font-size: clamp(2.5rem, 5vw, 4.5rem);
           letter-spacing: 0.04em;
-          color: #ffffff;
+          color: #0a0a09;
           line-height: 1;
           margin-bottom: 2rem;
         }
@@ -302,7 +302,7 @@ body { background-color: #ffffff; color: #1a1a18; }
         .lightbox-title {
           font-family: var(--font-display);
           font-size: 1.2rem;
-          color: #1a1a18;
+          color: #ffffff;
           margin-bottom: 0.3rem;
         }
 

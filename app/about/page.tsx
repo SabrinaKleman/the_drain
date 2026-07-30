@@ -36,10 +36,11 @@ export default function About() {
 
         .portrait-caption {
           font-family: var(--font-mono);
-          font-size: 0.6rem;
+          font-size: 0.7rem;
+        font-weight: 400;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--muted);
+          color: var(--off-white);
         }
 
         .about-text-col { padding-top: 0.5rem; }
@@ -70,7 +71,7 @@ export default function About() {
         .about-bio p {
           font-family: var(--font-mono);
           font-size: 0.8rem;
-          font-weight: 300;
+          font-weight: 400;
           line-height: 1.9;
           color: var(--light);
           margin-bottom: 1.5rem;
@@ -86,6 +87,7 @@ export default function About() {
         .contact-label {
           font-family: var(--font-mono);
           font-size: 0.6rem;
+        font-weight: 400;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: var(--muted);
@@ -101,6 +103,7 @@ export default function About() {
         .contact-link {
           font-family: var(--font-mono);
           font-size: 0.75rem;
+        font-weight: 400;
           color: var(--off-white);
           letter-spacing: 0.05em;
           transition: color 0.2s;
