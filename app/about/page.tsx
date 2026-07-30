@@ -141,8 +141,7 @@ export default function About() {
           <div className="about-bio fade-up fade-up-delay-3">
             <p>
               Chris Giusto is a New York-based artist working under the name The Drain.
-              His paintings combine dark humor with deadpan observation — everyday objects
-              rendered with a directness that feels both familiar and deeply strange.
+              His paintings explore science, animal life, art history, and time in contexts true to the familiar imagery of the contemporary world - combining the emotion of experiences fundamental to life with their same rendering in today's times.
             </p>
             <p>
               {/* Add Chris's real bio here */}
