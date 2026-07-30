@@ -48,6 +48,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           display: inline-block;
           font-family: var(--font-mono);
           font-size: 0.6rem;
+        font-weight: 400;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: #6b6b64;

@@ -30,8 +30,9 @@ export default function Footer() {
           font-family: var(--font-mono);
           font-size: 0.6rem;
           letter-spacing: 0.15em;
+        font-weight: 400;
           text-transform: uppercase;
-          color: var(--black);
+          color: var(--muted);
           transition: color 0.2s;
         }
 
@@ -40,6 +41,7 @@ export default function Footer() {
         .footer-copy {
           font-family: var(--font-mono);
           font-size: 0.6rem;
+        font-weight: 400;
           letter-spacing: 0.1em;
           color: var(--mid);
         }
