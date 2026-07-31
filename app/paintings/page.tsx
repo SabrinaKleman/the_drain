@@ -149,6 +149,15 @@ body.light-mode .nav {
   border-bottom-color: #d4cfc7;
 }
 
+body.light-mode .hamburger span {
+  background: #1a1a18;
+}
+
+/* And the mobile close button */
+body.light-mode .mobile-close {
+  color: #1a1a18;
+}
+
 body.light-mode .nav-logo,
 body.light-mode .nav-links a.active,
 body.light-mode .nav-links a:hover {
@@ -194,7 +203,7 @@ body.light-mode .nav-links a:hover {
   justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.1em;
   color: white;
   z-index: 10;

@@ -38,6 +38,32 @@ export default function PaintingDetail({
     <>
       <style>{`
 body { background-color: #ffffff; color: #1a1a18; }
+        .nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: #d4cfc7 !important;
+}
+
+.nav-logo {
+  color: #1a1a18 !important;
+}
+
+.nav-links a {
+  color: #6b6b64 !important;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #1a1a18 !important;
+}
+
+.hamburger span {
+  background: #1a1a18 !important;
+}
+
+.mobile-close {
+  color: #1a1a18 !important;
+}
+
         .detail-wrap {
           padding: 8rem 2.5rem 6rem;
           max-width: 1200px;
