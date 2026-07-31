@@ -151,10 +151,19 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <button className="hamburger" onClick={() => setMenuOpen(true)} aria-label="Open menu">
+        {/* CHANGED: toggles instead of only opens */}
+        <button className="hamburger" onClick={() => setMenuOpen(prev => !prev)} aria-label="Open menu">
           <span /><span /><span />
         </button>
       </nav>
+
+      {/* ADDED: overlay closes menu when clicking outside */}
+      {menuOpen && (
+        <div
+          style={{ position: 'fixed', inset: 0, zIndex: 98 }}
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
 
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <button className="mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
