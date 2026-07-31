@@ -56,7 +56,7 @@ body { background-color: #ffffff; color: #1a1a18; }
           transition: color 0.2s;
         }
 
-        .detail-back:hover { color: var(--off-white); }
+        .detail-back:hover { color: var(--red); }
 
         .detail-grid {
           display: grid;
@@ -96,10 +96,11 @@ body { background-color: #ffffff; color: #1a1a18; }
           right: 0.75rem;
           font-family: var(--font-mono);
           font-size: 0.5rem;
+        font-weight: 400;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           background: #ffffff;
-          color: #6b6b64;
+          color: black;
           padding: 0.2rem 0.5rem;
           opacity: 0;
           transition: opacity 0.3s;
