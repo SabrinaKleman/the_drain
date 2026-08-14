@@ -471,7 +471,7 @@ body { background-color: #ffffff; color: #1a1a18; }
             
             <div className="fade-up fade-up-delay-4">
               <a
-                href={`mailto:cgiusto1@gmail.com?subject=${subject}&body=${body}`}
+                href={`mailto:thedrainart@gmail.com?subject=${subject}&body=${body}`}
                 className="inquire-btn"
               >
                 Inquire about this work &#8594;
